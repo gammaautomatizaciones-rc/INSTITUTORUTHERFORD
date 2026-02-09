@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instituto Rutherford - Profesores Universitarios</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="assets/logo.png" alt="Instituto Rutherford Logo" id="logo-img">
+                    <div class="logo-text">
+                        <h1>Instituto Rutherford</h1>
+                        <span>Profesores Universitarios</span>
+                    </div>
+                </div>
+                <nav class="nav">
+                <a href="#inicio" class="nav-link">Inicio</a>
+                <a href="#materias" class="nav-link">Materias</a>
+                <a href="#profesores" class="nav-link">Profesores</a>
+                <a href="#redes" class="nav-link">Redes</a>
+                </nav>
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#inicio" class="mobile-nav-link">Inicio</a>
+        <a href="#materias" class="mobile-nav-link">Materias</a>
+        <a href="#profesores" class="mobile-nav-link">Profesores</a>
+        <a href="#redes" class="mobile-nav-link">Redes</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content-wrapper">
+                <div class="hero-logo-large">
+                    <img src="assets/logo.png" alt="Instituto Rutherford Logo" class="hero-logo-img">
+                </div>
+                <div class="hero-content">
+                    <h2 class="hero-title">Clases Particulares desde Recoleta a toda la Argentina</h2>
+                    <p class="hero-subtitle">Todos los niveles • A domicilio y virtuales</p>
+                    <p class="hero-description">
+                        Docentes de las mejores universidades de Argentina. 
+                        Matemática, Física, Ciencias de la Salud, Economía, 
+                        Contabilidad, Diseño, Idiomas y más.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="https://wa.me/5491140743723" target="_blank" class="btn btn-primary">
+                            <i class="fab fa-whatsapp"></i> Contactar por WhatsApp
+                        </a>
+                        <a href="#materias" class="btn btn-secondary">Ver Materias</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span class="stat-number">8+</span>
+                    <span class="stat-label">Áreas de estudio</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-university"></i>
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Universidades</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <span class="stat-number">100+</span>
+                    <span class="stat-label">Materias</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-users"></i>
+                    <span class="stat-number">Todos</span>
+                    <span class="stat-label">Niveles</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Materias Section -->
+    <section id="materias" class="materias">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestras Áreas de Enseñanza</h2>
+                <p class="section-subtitle">Selecciona un área para ver todos los temas disponibles</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Todas</button>
+                <button class="filter-btn" data-filter="exactas">Ciencias Exactas</button>
+                <button class="filter-btn" data-filter="salud">Ciencias de la Salud</button>
+                <button class="filter-btn" data-filter="economia"> Contabilidad, Economía, Finanzas y Negocios</button>
+                <button class="filter-btn" data-filter="tecnologia">Tecnología y Diseño</button>
+                <button class="filter-btn" data-filter="idiomas">Idiomas</button>
+            </div>
+
+            <!-- Materias Grid -->
+            <div class="materias-grid">
+                <!-- Matemática -->
+                <div class="materia-card" data-category="exactas">
+                    <div class="materia-icon">
+                        <i class="fas fa-square-root-alt"></i>
+                    </div>
+                    <h3 class="materia-title">Matemática</h3>
+                    <p class="materia-level">Todos los niveles</p>
+                    <button class="materia-btn" onclick="openModal('matematica')">Ver temas</button>
+                </div>
+
+                <!-- Física -->
+                <div class="materia-card" data-category="exactas">
+                    <div class="materia-icon">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <h3 class="materia-title">Física</h3>
+                    <p class="materia-level">Todos los niveles</p>
+                    <button class="materia-btn" onclick="openModal('fisica')">Ver temas</button>
+                </div>
+
+                <!-- Estadística -->
+                <div class="materia-card" data-category="exactas">
+                    <div class="materia-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="materia-title">Estadística</h3>
+                    <p class="materia-level">Todos los niveles</p>
+                    <button class="materia-btn" onclick="openModal('estadistica')">Ver temas</button>
+                </div>
+
+                <!-- Biología -->
+                <div class="materia-card" data-category="salud">
+                    <div class="materia-icon">
+                        <i class="fas fa-dna"></i>
+                    </div>
+                    <h3 class="materia-title">Biología</h3>
+                    <p class="materia-level">Todos los niveles</p>
+                    <button class="materia-btn" onclick="openModal('biologia')">Ver temas</button>
+                </div>
+
+                <!-- Ciencias de la Salud -->
+                <div class="materia-card" data-category="salud">
+                    <div class="materia-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3 class="materia-title">Ciencias de la Salud</h3>
+                    <p class="materia-level">Todos los niveles</p>
+                    <button class="materia-btn" onclick="openModal('salud')">Ver temas</button>
+                </div>
+
+                <!-- Economía -->
+                <div class="materia-card" data-category="economia">
+                    <div class="materia-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3 class="materia-title">Economía</h3>
+                    <p class="materia-level">Todos los niveles</p>
+                    <button class="materia-btn" onclick="openModal('economia')">Ver temas</button>
+                </div>
+
+                <!-- Contabilidad -->
+                <div class="materia-card" data-category="economia">
+                    <div class="materia-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3 class="materia-title">Contabilidad</h3>
+                    <p class="materia-level">Todos los niveles</p>
+                    <button class="materia-btn" onclick="openModal('contabilidad')">Ver temas</button>
+                </div>
+
+                <!-- Computación -->
+                <div class="materia-card" data-category="tecnologia">
+                    <div class="materia-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="materia-title">Computación</h3>
+                    <p class="materia-level">Todos los niveles</p>
+                    <button class="materia-btn" onclick="openModal('computacion')">Ver temas</button>
+                </div>
+
+                <!-- Diseño -->
+                <div class="materia-card" data-category="tecnologia">
+                    <div class="materia-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 class="materia-title">Diseño</h3>
+                    <p class="materia-level">Todos los niveles</p>
+                    <button class="materia-btn" onclick="openModal('diseno')">Ver temas</button>
+                </div>
+
+                <!-- Idiomas -->
+                <div class="materia-card" data-category="idiomas">
+                    <div class="materia-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3 class="materia-title">Idiomas</h3>
+                    <p class="materia-level">Todos los niveles</p>
+                    <button class="materia-btn" onclick="openModal('idiomas')">Ver temas</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Structure -->
+    <div id="materia-modal" class="modal-profesional">
+        <div class="modal-content-profesional">
+            <div class="modal-header-profesional">
+                <h3 id="modal-title">Temas Disponibles</h3>
+                <button class="modal-close-profesional" onclick="closeModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div id="modal-content" class="modal-body-profesional">
+                <!-- Content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Profesores Section -->
+    <section id="profesores" class="profesores">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestros Profesores</h2>
+                <p class="section-subtitle">Docentes de las mejores universidades de Argentina</p>
+            </div>
+
+            <div class="profesores-grid">
+                <div class="profesor-card">
+                    <div class="profesor-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3>Universidad de Buenos Aires (UBA)</h3>
+                    <p>Docentes de las mejores facultades</p>
+                </div>
+                <div class="profesor-card">
+                    <div class="profesor-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>Universidad Tecnológica Nacional (UTN)</h3>
+                    <p>Especialistas en ingeniería y tecnología</p>
+                </div>
+                <div class="profesor-card">
+                    <div class="profesor-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Universidad de San Andrés</h3>
+                    <p>Docentes de ciencias económicas y sociales</p>
+                </div>
+                <div class="profesor-card">
+                    <div class="profesor-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Universidad Torcuato Di Tella</h3>
+                    <p>Especialistas en administración y economía</p>
+                </div>
+                <div class="profesor-card">
+                    <div class="profesor-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3>UADE, UCA, CEMA, Austral</h3>
+                    <p>Docentes de universidades privadas</p>
+                </div>
+                <div class="profesor-card">
+                    <div class="profesor-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>UAI, USAL, UCA</h3>
+                    <p>Especialistas en ciencias de la salud</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Redes Section -->
+    <section id="redes" class="redes">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Redes</h2>
+                <p class="section-subtitle">Seguinos en nuestras redes sociales</p>
+            </div>
+
+            <div class="social-buttons">
+                <a href="https://instagram.com/ProfesoresUniversitarios2" target="_blank" class="social-btn instagram">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+                <a href="https://facebook.com/ProfesoresUniversitarios" target="_blank" class="social-btn facebook">
+                    <i class="fab fa-facebook"></i>
+                    <span>Facebook</span>
+                </a>
+                <a href="https://youtube.com/ProfesoresUniversitarios" target="_blank" class="social-btn youtube">
+                    <i class="fab fa-youtube"></i>
+                    <span>YouTube</span>
+                </a>
+                <a href="https://tiktok.com/@ProfesoresUniversitarios" target="_blank" class="social-btn tiktok">
+                    <i class="fab fa-tiktok"></i>
+                    <span>TikTok</span>
+                </a>
+                <a href="https://x.com/ProfesoresUni" target="_blank" class="social-btn x-social">
+                    <i class="fab fa-x-twitter"></i>
+                    <span>X</span>
+                </a>
+                <a href="https://open.spotify.com/user/your-spotify-username" target="_blank" class="social-btn spotify">
+                    <i class="fab fa-spotify"></i>
+                    <span>Spotify</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-minimal">
+        <div class="container">
+            <div class="footer-content-minimal">
+                <div class="footer-logo-minimal">
+                    <img src="assets/logo.png" alt="Instituto Rutherford Logo">
+                    <p>Instituto Rutherford - Profesores Universitarios</p>
+                </div>
+                <div class="footer-links-minimal">
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#materias">Materias</a></li>
+                        <li><a href="#profesores">Profesores</a></li>
+                        <li><a href="#redes">Redes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact-minimal">
+                    <p><i class="fab fa-whatsapp"></i> +54 9 11 4074 3723</p>
+                </div>
+            </div>
+            <div class="footer-bottom-minimal">
+                <p>&copy; 2024 Instituto Rutherford. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
