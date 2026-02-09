@@ -108,7 +108,7 @@ ul, ol {
    ============================================ */
 .header {
     position: fixed;
-    top: 10px;
+    top: 20px;
     left: 10px;
     right: 10px;
     z-index: 1000;
@@ -1852,3 +1852,4 @@ ul, ol {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--color-gray-500);
 }
+
