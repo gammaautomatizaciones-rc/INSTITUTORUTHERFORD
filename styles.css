@@ -1682,6 +1682,7 @@ ul, ol {
     .header-content {
         justify-content: space-between;
         padding: 0 1rem;
+        height: 100px;
     }
     
     .logo {
@@ -1852,4 +1853,3 @@ ul, ol {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--color-gray-500);
 }
-
