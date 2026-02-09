@@ -226,9 +226,9 @@ ul, ol {
 .mobile-menu {
     display: none;
     position: fixed;
-    top: 80px;
-    left: 0;
-    right: 0;
+    top: 110px;
+    left: 10px;
+    right: 10px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.95) 100%);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     padding: 1rem;
@@ -236,6 +236,7 @@ ul, ol {
     flex-direction: column;
     gap: 0.25rem;
     border-bottom: 1px solid rgba(179, 31, 31, 0.1);
+    border-radius: var(--border-radius-lg);
 }
 
 .mobile-menu.active {
