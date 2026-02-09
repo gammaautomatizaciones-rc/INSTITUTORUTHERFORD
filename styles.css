@@ -1037,6 +1037,13 @@ ul, ol {
     margin-bottom: 3rem;
 }
 
+/* Responsive para móviles - tarjetas una debajo de la otra */
+@media (max-width: 768px) {
+    .contact-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
 .contact-card {
     background-color: var(--color-white);
     border: 1px solid var(--color-gray-200);
