@@ -1682,11 +1682,6 @@ ul, ol {
         height: 95px;
         padding: 0 1rem;
     }
-    
-    /* Mobile menu improvements for tablet landscape */
-    .mobile-menu {
-        top: 110px;
-    }
 }
 
 @media (max-width: 768px) {
